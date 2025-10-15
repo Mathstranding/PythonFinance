@@ -14,7 +14,7 @@ num_MA_I = 5 # Shortest term MA number of days
 num_MA_II = 10 # Longest term MA number of days
 MA5_array = np.zeros(num_MA_I) # 5-day MA array
 MA10_array = np.zeros(num_MA_II) # 10-day MA array
-df = pd.read_csv('C:\\Stock Price Library\\600000.SH.csv')
+df = pd.read_csv('input data directory')
 
 # Body
 for i in range(len(df)):
@@ -84,3 +84,4 @@ plt.xlabel('Time')
 plt.ylabel('Portfolio Value')
 plt.title('MA5~MA10 Backtest Result')
 plt.show()
+
