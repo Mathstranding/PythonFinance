@@ -35,11 +35,11 @@ Here we use API from Tushare for Hong Kong and Mainland China exchanges. A token
 
 3. Modify save_dir = 'C:\\\\ABC\\\\DEF' + '\\\\' + stock + '.csv'
 
-Select a folder you would like to store your stock data. The folder location can be found by right-clicking the folder icon, under "Properties." Copy and paste it to replace the 'C:\\\\ABC\\\\DEF' part with your folder directory. If your folder directory comes with only one slash '\\' and it did not work, try replacing all the '\\' with '\\\\.'
+  * Select a folder you would like to store your stock data. The folder location can be found by right-clicking the folder icon, under "Properties." Copy and paste it to replace the 'C:\\\\ABC\\\\DEF' part with your folder directory. If your folder directory comes with only one slash '\\' and it did not work, try replacing all the '\\' with '\\\\.'
 
-4. Update the following (read comments):
+5. Update the following (read comments):
 
-stock_code; stock_X; asset_class; start_date; end_date
+  * stock_code; stock_X; asset_class; start_date; end_date
 
 ### III. After Getting the Data
 
