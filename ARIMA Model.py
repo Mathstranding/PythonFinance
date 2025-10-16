@@ -6,7 +6,7 @@ from statsmodels.tsa.arima.model import ARIMA
 plt.rcParams['figure.dpi'] = 1000 # DPI setup
 
 # Data processing
-df = pd.read_csv('C:\\Stock Price Library\\603825.SH.csv',encoding='utf-8-sig',usecols=['close'])
+df = pd.read_csv('Paste stock data directory here',encoding='utf-8-sig',usecols=['close'])
 df.replace(0,np.nan,inplace=True) # replace close with 0 value with the previous close
 df.ffill(inplace=True)
 
@@ -42,10 +42,10 @@ model = pm.auto_arima(df.values,
 # print(model.summary())
 
 # Prediction with the selected parameters
-n_periods = 7
+n_periods = 10
 fc, confint = model.predict(n_periods=n_periods, return_conf_int=True)
 index_of_fc = np.arange(len(df.values), len(df.values)+n_periods)
-# ARIMA prediction interval
+# ARIMA forcast series confidence interval
 fc_series = pd.Series(fc, index=index_of_fc)
 lower_series = pd.Series(confint[:, 0], index=index_of_fc) # lower bound
 upper_series = pd.Series(confint[:, 1], index=index_of_fc) # upper bound
@@ -57,3 +57,4 @@ plt.fill_between(lower_series.index,
                  upper_series,
                  color='k', alpha=.15)
 plt.show()
+
